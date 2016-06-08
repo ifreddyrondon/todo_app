@@ -8,7 +8,8 @@ Vertion 1 of a RESTFul API to create users and tasks. Each user can register and
 ## Auth system
 
 All the requests made to the API need an *Authorization header* with a valid token and the prefix *Bearer* 
-`Authorization: Bearer <token>`
+
+```Authorization: Bearer <token>```
 
 In order to obtain a valid token it's necesary to send a request `POST /api/v1/auth/token/` with *username* and *password*. To register a new user it's necesary to make a request `POST /api/v1/users/` with the params:
 ```
