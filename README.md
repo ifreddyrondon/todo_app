@@ -19,57 +19,51 @@ confirm_password String
 
 ## End Points
 ### Auth
-`POST /api/v1/auth/refresh/`
-`POST /api/v1/auth/token/`
+* `POST /api/v1/auth/refresh/`
+* `POST /api/v1/auth/token/`
 
 ### Users
-`POST /api/v1/users/`
+* `POST /api/v1/users/`
 The following end points are just available for *staff users*
-`POST /api/v1/users/`
-`POST /api/v1/users/`
-`POST /api/v1/users/`
+* `GET /api/v1/users/`
+* `PUT /api/v1/users/{username}`
+* `GET /api/v1/users/{username}`
+* `PATCH /api/v1/users/{username}`
+* `DELETE /api/v1/users/{username}`
+
+### Tasks
+* `GET /api/v1/tasks/`
+* `POST /api/v1/tasks/`
+* `PUT /api/v1/tasks/{pk}`
+* `GET /api/v1/tasks/{pk}`
+* `PATCH /api/v1/tasks/{pk}`
+* `DELETE /api/v1/tasks/{pk}`
+
+## Documentation
+All the API docs is available in *http://0.0.0.0:8000/docs/*
 
 # Installation process 
 
 ## Install the system dependencies
 * **git** 
-* **node v0.12.0** or greather
-* **npm 3.8.6** or greather
-* **postgres 9.4** or greather
+* **pip**
 
 ## Get the code
-1. Clone the repository
-2. Change to **develop** branch
-`git checkout develop`
+* Clone the repository
+`git clone https://github.com/spantons/todo_app.git`
 
 ## Install the project dependencies
 
-`npm install`
+`pip -r install requirements/development.txt`
 
-## Config the database
-1. Go to postgres console and create a new database
-2. Create **local.js** file in **/config/env/** and add the following lines:
+## Run the command to generate the database
+`python manage.py migrate`
 
-```json
-module.exports = {
-    db: {
-        name: "DATABASE_NAME",
-        password: "DATABASE_PASSWORD",
-        username: "DATABASE_USERNAME",
-        sync: true
-    }
-};
-```
-
-## Run the command to generate the frontend code
-`npm run deploy`
-
-## Run the server for first time
-`npm run server`
-
-## Deactivate the model synchronization 
-1. Stop the server process
-2. Change the flag **sync** to false in **/config/env/local.js**. The flag sync generate the models on the database if it is true the data will be deleted when restart the server.
+## Generate super user
+`python manage.py createsuperuser`
 
 ## Run the server
-`npm run server` the application will be running on port 3000
+`python manage.py runserver` the application will be running on port 8000 *http://localhost:8000/*
+
+## Run the test
+`python manage.py test`
