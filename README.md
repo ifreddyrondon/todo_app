@@ -41,7 +41,7 @@ The following end points are just available for *staff users*
 * `DELETE /api/v1/tasks/{pk}`
 
 ## Documentation
-All the API docs are available in *http://0.0.0.0:8000/docs/*
+All the API docs are available in *http://0.0.0.0:8000/docs/* builded with *Django REST Swagger*
 
 # Installation process 
 
