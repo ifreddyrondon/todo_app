@@ -63,7 +63,7 @@ All the API docs is available in *http://0.0.0.0:8000/docs/*
 `python manage.py createsuperuser`
 
 ## Run the server
-`python manage.py runserver` the application will be running on port 8000 *http://localhost:8000/*
+`python manage.py runserver` the application will be running on port 8000 *http://0.0.0.0:8000/*
 
 ## Run the test
 `python manage.py test`
