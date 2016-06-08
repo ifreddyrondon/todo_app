@@ -7,11 +7,11 @@ Vertion 1 of a RESTFul API to create users and tasks. Each user can register and
 
 ## Auth system
 
-All the requests made to the API need an *Authorization header* with a valid token and the prefix *Bearer* 
+All the requests made to the API need an **Authorization header** with a valid token and the prefix **Bearer**
 
 ```Authorization: Bearer <token>```
 
-In order to obtain a valid token it's necesary to send a request `POST /api/v1/auth/token/` with *username* and *password*. To register a new user it's necesary to make a request `POST /api/v1/users/` with the params:
+In order to obtain a valid token it's necesary to send a request `POST /api/v1/auth/token/` with **username** and **password**. To register a new user it's necesary to make a request `POST /api/v1/users/` with the params:
 ```
 username String
 password String
@@ -25,7 +25,7 @@ confirm_password String
 
 ### Users
 * `POST /api/v1/users/`
-The following end points are just available for *staff users*
+The following end points are just available for **staff users**
 * `GET /api/v1/users/`
 * `PUT /api/v1/users/{username}`
 * `GET /api/v1/users/{username}`
@@ -41,7 +41,7 @@ The following end points are just available for *staff users*
 * `DELETE /api/v1/tasks/{pk}`
 
 ## Documentation
-All the API docs are available in *http://0.0.0.0:8000/docs/* builded with *Django REST Swagger*
+All the API docs are available in **http://0.0.0.0:8000/docs/** builded with **Django REST Swagger**
 
 # Installation process 
 
@@ -64,7 +64,7 @@ All the API docs are available in *http://0.0.0.0:8000/docs/* builded with *Djan
 `python manage.py createsuperuser`
 
 ## Run the server
-`python manage.py runserver` the application will be running on port 8000 *http://0.0.0.0:8000/*
+`python manage.py runserver` the application will be running on port 8000 **http://0.0.0.0:8000/**
 
 ## Run the test
 `python manage.py test`
