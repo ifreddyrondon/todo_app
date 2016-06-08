@@ -3,11 +3,11 @@
 
 # Description
 
-Vertion 1 of a RESTFul API to create users and tasks. Each users can register and keep tracking of their own task and marke them as completed when they are finished. The user have the posibiltiy to edit the description of the task and delete it. The admin can create staff users to check all the task.
+Vertion 1 of a RESTFul API to create users and tasks. Each user can register and keep track of their own tasks and mark them as complete when they are finished. The user has the posibiltiy to edit the description of the tasks and delete them. The admin can create staff users to check all the tasks.
 
 ## Auth system
 
-All the request make it to the API need has an *Authorization header* with a valid token and the prefix *Bearer* 
+All the requests made to the API need an *Authorization header* with a valid token and the prefix *Bearer* 
 `Authorization: Bearer <token>`
 
 In order to obtain a valid token it's necesary to send a request `POST /api/v1/auth/token/` with *username* and *password*. To register a new user it's necesary to make a request `POST /api/v1/users/` with the params:
@@ -40,7 +40,7 @@ The following end points are just available for *staff users*
 * `DELETE /api/v1/tasks/{pk}`
 
 ## Documentation
-All the API docs is available in *http://0.0.0.0:8000/docs/*
+All the API docs are available in *http://0.0.0.0:8000/docs/*
 
 # Installation process 
 
