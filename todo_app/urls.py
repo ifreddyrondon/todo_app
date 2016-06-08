@@ -27,10 +27,12 @@ urlpatterns = [
 
     # API
     # Auth endpoints
-    url(r'^api/' + v + '/a/refresh/', refresh_jwt_token, name='refresh_jwt_token'),
-    url(r'^api/' + v + '/a/token/', obtain_jwt_token, name='obtain_jwt_token'),
+    url(r'^api/' + v + '/auth/refresh/', refresh_jwt_token, name='refresh_jwt_token'),
+    url(r'^api/' + v + '/auth/token/', obtain_jwt_token, name='obtain_jwt_token'),
     # Router endpoints
     url(r'^api/' + v + '/', include(router.urls, namespace='api')),
+    # docs
+    url(r'^docs/', include('rest_framework_swagger.urls')),
 
     # only for test purposes
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
