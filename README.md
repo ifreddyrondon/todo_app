@@ -54,7 +54,7 @@ All the API docs is available in *http://0.0.0.0:8000/docs/*
 
 ## Install the project dependencies
 
-`pip -r install requirements/development.txt`
+`pip install -r requirements/development.txt`
 
 ## Run the command to generate the database
 `python manage.py migrate`
