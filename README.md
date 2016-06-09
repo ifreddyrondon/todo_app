@@ -1,4 +1,4 @@
-# TODO LIST API
+# TODO list API
 ### created with django rest framework 
 
 # Description
